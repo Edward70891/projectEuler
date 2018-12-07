@@ -11,12 +11,9 @@ def circularPrime(n):
     if not isinstance(n, int):
         raise TypeError("n must be an integer!")
 
-    if n == 2:
-        return True
-
     # If there are any even digits left in the number, it's not a circular prime
     for char in str(n):
-        if char in "02468":
+        if char in "02468" and n != 2:
             return False
 
     # -- Permute the Number --
@@ -35,10 +32,11 @@ def circularPrime(n):
             return False
     return True
 
-lowerBound = int(input("Enter the lowest number you would like to test to: "))
+
+lowerBound = int(input("Enter the lowest number you would like to test from: "))
 upperBound = int(input("Enter the highest number you would like to test to: "))
 total = 0
 for i in range(lowerBound, upperBound + 1):
     if circularPrime(i):
         total += 1
-print("Under " + str(upperBound) + ": " + str(total))
+print("Under " + str(upperBound + 1) + ": " + str(total))

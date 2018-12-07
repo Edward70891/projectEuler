@@ -1,7 +1,7 @@
 import math
 
 
-primesDict = {0: False, 1: False}
+primesDict = {0: False, 1: False, 2: True}
 
 
 def isPrime(n):
