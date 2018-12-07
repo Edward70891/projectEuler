@@ -61,7 +61,11 @@ def under100(num):
 
 
 def under1000(num):
-    if num > 999:
+    if num < 0:
+        raise ValueError("Number cannot be negative!")
+    elif num < 100:
+        return under100(num)
+    elif num > 999:
         raise ValueError("Number must be less than 1000!")
     numStr = str(num)
     result = digits[int(numStr[0])] + specials[0]
@@ -74,9 +78,7 @@ upperLimit = 1001
 total = 0
 for i in range(1, upperLimit):
     addition = ""
-    if i < 100:
-        addition = under100(i)
-    elif i < 1000:
+    if i < 1000:
         addition = under1000(i)
     elif i == 1000:
         addition = "one" + specials[1]
