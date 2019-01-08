@@ -1,0 +1,8 @@
+[package]
+name = "problem_3"
+version = "0.1.0"
+authors = ["Edward Duffy, Arch Laptop <edward70891@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bv = "0.10.0"
