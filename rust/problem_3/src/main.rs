@@ -22,7 +22,7 @@ fn factors(target: u64) -> Vec<u64> {
     let mut factor_list = Vec::new();
     for i in 2..target / 2 + 1 {
         if target % i == 0 {
-            factor_list.push(i)
+            factor_list.push(i);
         }
     }
     factor_list
