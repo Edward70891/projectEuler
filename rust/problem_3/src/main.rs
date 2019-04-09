@@ -12,7 +12,9 @@ fn main() {
         .expect("Please enter a positive number!");
 
     // Find it's largest prime factor and print it
-    match prime_filter(factors(largest_num)).last() {
+    let target_factors: Vec<u64> = factors(largest_num);
+    let target_primes: Vec<u64> = prime_filter(target_factors);
+    match target_primes.last() {
         Some(prime_result) => println!("Largest Prime Factor: {}", prime_result),
         None => println!("There aren't any prime factors!"),
     }
