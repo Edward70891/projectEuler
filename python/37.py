@@ -1,4 +1,4 @@
-from prime_sieve import PrimeSieve
+from miscLibraries.python.prime_sieve import PrimeSieve
 
 trunc_primes = set()
 all_primes = PrimeSieve(1000000).primes_set

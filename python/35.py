@@ -1,4 +1,4 @@
-from prime_sieve import PrimeSieve
+from miscLibraries.python.prime_sieve import PrimeSieve
 
 
 def get_rotations(num):
